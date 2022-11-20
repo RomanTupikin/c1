@@ -14,7 +14,7 @@ int number = Convert.ToInt32(Console.ReadLine());
 
 if (number > 99)
 {
-    while (number > 999)
+    while (number > 1000)
         {
             number = number / 10;
         }
@@ -24,7 +24,7 @@ if (number > 99)
 
 else if (number < -99)
 {
-    while (number < -999)
+    while (number < -1000)
         {
             number = number / 10;
         }
