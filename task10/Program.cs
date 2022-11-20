@@ -13,13 +13,13 @@ int Middle(int num)
 Console.WriteLine("Введите трехзначное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
-if (number < 999 && number > 99)
+if (number < 1000 && number > 99)
 {
     int res = Middle(number);
     Console.WriteLine($"Вторая цифра числа: {res}");
 }
 
-else if (number > -999 && number < -99)
+else if (number > -1000 && number < -99)
 {
     int res = Middle(number * -1);
     Console.WriteLine($"Вторая цифра числа: {res}");
