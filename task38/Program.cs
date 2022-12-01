@@ -28,13 +28,13 @@ void PrintArray(double[] array)
 double Difference(double min, double max)
 {
     double num = max - min;
-    double result = Math.Round(num, 1);
-    return result;
+    double difference = Math.Round(num, 1);
+    return difference;
 }
 
 double Max(double[] array)
 {
-    double max = 0;
+    double max = array[0];
     for (int i = 0; i < array.Length; i++)
     {
         if (max < array[i]) max = array[i];
@@ -42,9 +42,9 @@ double Max(double[] array)
     return max;
 }
 
-double Min(double[] array, double max)
+double Min(double[] array)
 {
-    double min = max;
+    double min = array[0];
     for (int i = 0; i < array.Length; i++)
     {
         if (min > array[i]) min = array[i];
@@ -55,6 +55,6 @@ double Min(double[] array, double max)
 double[] arr = CreateArrayRndDouble(4, 1, 100);
 PrintArray(arr);
 double max = Max (arr);
-double min = Min (arr, max);
+double min = Min (arr);
 double result = Difference(min, max);
 Console.Write($" -> {result}");
